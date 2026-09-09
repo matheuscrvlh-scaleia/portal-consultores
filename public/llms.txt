@@ -1,0 +1,18 @@
+# Portal dos Consultores
+
+## Sobre
+
+O Portal dos Consultores é uma plataforma que conecta empresas e visitantes a consultores independentes por área de atuação — estratégia, finanças, marketing, operações, pessoas e tecnologia. Cada consultor publica seu perfil, portfólio de cases e conteúdos, e visitantes podem enviar solicitações de contato diretamente pela plataforma.
+
+## Páginas públicas indexáveis
+
+- Home: https://SEU-DOMINIO.com/ — listagem de consultores publicados com busca e filtro por área de atuação.
+- Política de Privacidade: https://SEU-DOMINIO.com/privacidade — informações sobre coleta, uso e retenção de dados pessoais.
+
+## Áreas autenticadas (não devem ser rastreadas)
+
+- Painel do consultor (/painel/*)
+- Administração (/admin/*)
+- Biblioteca de conteúdos para visitantes logados (/conteudos/*)
+- Autenticação (/auth) e páginas de erro de permissão (/sem-permissao)
+- API interna (/api/*)

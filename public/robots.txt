@@ -1,0 +1,46 @@
+User-agent: Googlebot
+Allow: /
+Disallow: /painel
+Disallow: /admin
+Disallow: /conteudos
+Disallow: /auth
+Disallow: /sem-permissao
+Disallow: /api
+
+User-agent: Bingbot
+Allow: /
+Disallow: /painel
+Disallow: /admin
+Disallow: /conteudos
+Disallow: /auth
+Disallow: /sem-permissao
+Disallow: /api
+
+User-agent: Twitterbot
+Allow: /
+Disallow: /painel
+Disallow: /admin
+Disallow: /conteudos
+Disallow: /auth
+Disallow: /sem-permissao
+Disallow: /api
+
+User-agent: facebookexternalhit
+Allow: /
+Disallow: /painel
+Disallow: /admin
+Disallow: /conteudos
+Disallow: /auth
+Disallow: /sem-permissao
+Disallow: /api
+
+User-agent: *
+Allow: /
+Disallow: /painel
+Disallow: /admin
+Disallow: /conteudos
+Disallow: /auth
+Disallow: /sem-permissao
+Disallow: /api
+
+Sitemap: https://SEU-DOMINIO.com/sitemap.xml
