@@ -18,12 +18,12 @@ export function SiteFooter() {
             <p className="text-xs uppercase tracking-wide text-muted-foreground">
               Apoio institucional
             </p>
-            <div className="mt-3 flex h-12 items-end">
+            <div className="mt-3 flex h-[60px] items-end">
               <a href="https://comercio.prorius.com.br/" target="_blank" rel="noopener noreferrer">
                 <img
                   src={proriusLogo}
                   alt="Prorius — soluções em tecnologia"
-                  className="h-10 w-auto max-w-full object-contain"
+                  className="h-[60px] w-auto max-w-full object-contain"
                   loading="lazy"
                 />
               </a>
