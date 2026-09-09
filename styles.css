@@ -1,0 +1,222 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system — Portal dos Consultores.
+ * Marca: Graduate (títulos) + Montserrat (texto), laranja #FF8000,
+ * azul-marinho #0A1241, cantos retos (radius 0).
+ */
+
+@theme inline {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Graduate", "Montserrat", ui-sans-serif, sans-serif;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+  --radius-4xl: 0px;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-brand-orange: var(--brand-orange);
+  --color-brand-navy: var(--brand-navy);
+  --color-brand-red: var(--brand-red);
+  --color-brand-ink: var(--brand-ink);
+  --color-lead-contact: var(--lead-contact);
+  --color-lead-closed: var(--lead-closed);
+  --color-lead-lost: var(--lead-lost);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0rem;
+
+  /* Cores da marca */
+  --brand-orange: oklch(0.702 0.188 47.5);
+  --brand-orange-hover: oklch(0.638 0.176 45);
+  --brand-navy: oklch(0.229 0.084 273);
+  /* Aliases legados (mantêm compatibilidade com classes existentes) */
+  --brand-red: var(--brand-orange);
+  --brand-red-hover: var(--brand-orange-hover);
+  --brand-ink: var(--brand-navy);
+
+  --background: oklch(1 0 0);
+  --foreground: var(--brand-navy);
+  --lead-contact: oklch(0.985 0.025 95);
+  --lead-closed: oklch(0.985 0.025 145);
+  --lead-lost: oklch(0.985 0.025 25);
+  --card: oklch(1 0 0);
+  --card-foreground: var(--brand-navy);
+  --popover: oklch(1 0 0);
+  --popover-foreground: var(--brand-navy);
+  --primary: var(--brand-orange);
+  --primary-foreground: var(--brand-navy);
+  --secondary: oklch(0.968 0.004 273);
+  --secondary-foreground: var(--brand-navy);
+  --muted: oklch(0.968 0.004 273);
+  --muted-foreground: oklch(0.49 0.03 273);
+  --accent: oklch(0.951 0.008 273);
+  --accent-foreground: var(--brand-navy);
+  --destructive: oklch(0.524 0.169 29.23);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.9 0.008 273);
+  --input: oklch(0.9 0.008 273);
+  --ring: var(--brand-orange);
+  --chart-1: var(--brand-orange);
+  --chart-2: var(--brand-navy);
+  --chart-3: oklch(0.49 0.03 273);
+  --chart-4: oklch(0.78 0.13 60);
+  --chart-5: oklch(0.85 0.012 273);
+  --sidebar: oklch(0.98 0.005 273);
+  --sidebar-foreground: var(--brand-navy);
+  --sidebar-primary: var(--brand-orange);
+  --sidebar-primary-foreground: var(--brand-navy);
+  --sidebar-accent: oklch(0.951 0.008 273);
+  --sidebar-accent-foreground: var(--brand-navy);
+  --sidebar-border: oklch(0.9 0.008 273);
+  --sidebar-ring: var(--brand-orange);
+}
+
+.dark {
+  --background: var(--brand-navy);
+  --foreground: oklch(0.98 0.005 273);
+  --card: oklch(0.27 0.075 273);
+  --card-foreground: oklch(0.98 0.005 273);
+  --popover: oklch(0.27 0.075 273);
+  --popover-foreground: oklch(0.98 0.005 273);
+  --primary: var(--brand-orange);
+  --primary-foreground: var(--brand-navy);
+  --secondary: oklch(0.31 0.065 273);
+  --secondary-foreground: oklch(0.98 0.005 273);
+  --muted: oklch(0.31 0.065 273);
+  --muted-foreground: oklch(0.75 0.03 273);
+  --accent: oklch(0.34 0.06 273);
+  --accent-foreground: oklch(0.98 0.005 273);
+  --destructive: oklch(0.6 0.18 29.23);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(1 0 0 / 14%);
+  --input: oklch(1 0 0 / 18%);
+  --ring: var(--brand-orange);
+  --sidebar: oklch(0.27 0.075 273);
+  --sidebar-foreground: oklch(0.98 0.005 273);
+  --sidebar-primary: var(--brand-orange);
+  --sidebar-primary-foreground: var(--brand-navy);
+  --sidebar-accent: oklch(0.34 0.06 273);
+  --sidebar-accent-foreground: oklch(0.98 0.005 273);
+  --sidebar-border: oklch(1 0 0 / 14%);
+  --sidebar-ring: var(--brand-orange);
+}
+
+/* Superfície escura (azul-marinho): redefine os tokens semânticos no próprio escopo. */
+.surface-ink {
+  --background: var(--brand-navy);
+  --foreground: oklch(0.98 0.005 273);
+  --card: oklch(0.27 0.075 273);
+  --card-foreground: oklch(0.98 0.005 273);
+  --muted: oklch(0.31 0.065 273);
+  --muted-foreground: oklch(0.78 0.03 273);
+  --accent: oklch(0.34 0.06 273);
+  --accent-foreground: oklch(0.98 0.005 273);
+  --border: oklch(1 0 0 / 16%);
+  --input: oklch(1 0 0 / 20%);
+  --primary: var(--brand-orange);
+  --primary-foreground: var(--brand-navy);
+  --secondary: oklch(0.34 0.06 273);
+  --secondary-foreground: oklch(0.98 0.005 273);
+  --ring: var(--brand-orange);
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Superfície de destaque (laranja da marca). */
+.surface-accent,
+.surface-red {
+  --background: var(--brand-orange);
+  --foreground: var(--brand-navy);
+  --card: oklch(0.638 0.176 45);
+  --card-foreground: oklch(1 0 0);
+  --muted: oklch(0.638 0.176 45);
+  --muted-foreground: oklch(0.22 0.08 273);
+  --accent: oklch(0.638 0.176 45);
+  --accent-foreground: oklch(1 0 0);
+  --border: oklch(0.229 0.084 273 / 28%);
+  --input: oklch(0.229 0.084 273 / 32%);
+  --primary: var(--brand-navy);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.638 0.176 45);
+  --secondary-foreground: oklch(1 0 0);
+  --ring: var(--brand-navy);
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+@utility u-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brand-red);
+}
+
+@utility u-display {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.08;
+  font-weight: 400;
+}
+
+@utility u-rule {
+  display: block;
+  height: 3px;
+  width: 3rem;
+  background-color: var(--brand-red);
+  border: 0;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+}
