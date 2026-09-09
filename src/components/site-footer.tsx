@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 
-import proriusAsset from "@/assets/prorius.webp.asset.json";
+import proriusLogo from "@/assets/prorius.svg";
 import scaleiaLogo from "@/assets/scaleia-cropped.png";
 
 /**
@@ -19,12 +19,14 @@ export function SiteFooter() {
               Apoio institucional
             </p>
             <div className="mt-3 flex h-12 items-end">
-              <img
-                src={proriusAsset.url}
-                alt="Prorius — soluções em tecnologia"
-                className="h-10 w-auto max-w-full object-contain"
-                loading="lazy"
-              />
+              <a href="https://comercio.prorius.com.br/" target="_blank" rel="noopener noreferrer">
+                <img
+                  src={proriusLogo}
+                  alt="Prorius — soluções em tecnologia"
+                  className="h-10 w-auto max-w-full object-contain"
+                  loading="lazy"
+                />
+              </a>
             </div>
           </div>
 
@@ -33,12 +35,14 @@ export function SiteFooter() {
               Desenvolvido por
             </p>
             <div className="mt-3 flex h-12 items-end">
-              <img
-                src={scaleiaLogo}
-                alt="Scaleia AI"
-                className="h-6 w-auto max-w-full object-contain"
-                loading="lazy"
-              />
+              <a href="https://scaleia.ai/" target="_blank" rel="noopener noreferrer">
+                <img
+                  src={scaleiaLogo}
+                  alt="Scaleia AI"
+                  className="h-6 w-auto max-w-full object-contain"
+                  loading="lazy"
+                />
+              </a>
             </div>
           </div>
         </div>
