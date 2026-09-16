@@ -70,6 +70,10 @@ const PAPEL_LABEL: Record<Papel, string> = {
   admin: "Admin",
 };
 
+// Contas visitantes nascem do autocadastro público (/auth); o admin só cria
+// consultores ou outros admins por aqui.
+const PAPEIS_CRIACAO = PAPEIS.filter((p) => p !== "visitante");
+
 const REDES_LABEL: Record<(typeof REDES_PERMITIDAS)[number], string> = {
   linkedin: "LinkedIn",
   instagram: "Instagram",
@@ -248,7 +252,7 @@ function AdminUsuariosPage() {
   // Criação
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
-  const [papelNovo, setPapelNovo] = useState<Papel>("visitante");
+  const [papelNovo, setPapelNovo] = useState<Papel>("consultor");
   const [perfilNovo, setPerfilNovo] = useState<PerfilForm>(perfilVazio);
 
   // Alteração de papel / exclusão
@@ -449,7 +453,7 @@ function AdminUsuariosPage() {
                 onChange={(e) => setPapelNovo(e.target.value as Papel)}
                 className="mt-2 h-10 w-full border-2 border-border bg-background px-3 text-sm"
               >
-                {PAPEIS.map((p) => (
+                {PAPEIS_CRIACAO.map((p) => (
                   <option key={p} value={p}>
                     {PAPEL_LABEL[p]}
                   </option>
